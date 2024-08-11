@@ -1,5 +1,5 @@
 from sqlalchemy import JSON, Column, Integer, String
-from FASTAPI.database import Base # type: ignore
+from FastAPI.database import Base 
 
 class Hotels(Base):
     __tablename__ = "hotels"
@@ -10,3 +10,5 @@ class Hotels(Base):
     services  = Column(JSON, nullable = False)
     room_quatity  = Column(Integer, nullable = False)
     image_id = Column(Integer, nullable = False)
+    
+    
