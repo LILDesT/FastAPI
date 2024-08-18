@@ -7,7 +7,7 @@ from sqlalchemy import pool
 
 sys.path.insert(0, dirname(dirname(dirname(abspath(__file__)))))
 
-
+from FastAPI.config import settings
 from alembic import context
 from FastAPI.database import Base, DATABASE_URL
 from FastAPI.hotels.models import Hotels
@@ -16,7 +16,7 @@ from FastAPI.hotels.models import Hotels
 # access to the values within the .ini file in use.
 config = context.config
 
-config.set_main_option("sqlalchemy.url", f"{DATABASE_URL}?async_fallback=True")
+config.set_main_option("sqlalchemy.url", f"{settings.DATABASE_URL}?async_fallback=True")
 
 # Interpret the config file for Python logging.
 # This line sets up loggers basically.
