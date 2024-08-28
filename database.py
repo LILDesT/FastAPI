@@ -2,12 +2,10 @@ from sqlalchemy.ext.asyncio import AsyncSession, create_async_engine
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.orm import declarative_base
 
-# Define the database connection string
-from config import settings
+# Import the settings instance from config
+from FastAPI.config import settings
 
-# Create a complete database URL
-
-# Create an asynchronous engine
+# Create an asynchronous engine using the DATABASE_URL from settings
 engine = create_async_engine(settings.DATABASE_URL, echo=True)
 
 # Create an asynchronous session maker
