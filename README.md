@@ -14,7 +14,6 @@ pip install -r requirements.txt
 Usage
 Run the application:
 
-```bash
 uvicorn main:app --reload
 Visit http://127.0.0.1:8000 to access the API.
 
