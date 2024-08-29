@@ -18,13 +18,3 @@ Run the application:
 uvicorn main:app --reload
 Visit http://127.0.0.1:8000 to access the API.
 
-Features
-User management
-Hotel and room management
-Booking system
-Database migrations with Alembic
-Configuration
-Set up your environment variables in the .env file and run migrations:
-
-```bash
-alembic upgrade head
