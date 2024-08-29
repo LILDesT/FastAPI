@@ -10,3 +10,21 @@ cd FastAPI
 python -m venv venv
 source venv/bin/activate  # On Windows use `venv\Scripts\activate`
 pip install -r requirements.txt
+
+Usage
+Run the application:
+
+```bash
+uvicorn main:app --reload
+Visit http://127.0.0.1:8000 to access the API.
+
+Features
+User management
+Hotel and room management
+Booking system
+Database migrations with Alembic
+Configuration
+Set up your environment variables in the .env file and run migrations:
+
+```bash
+alembic upgrade head
